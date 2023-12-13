@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		02178D932B2932CC0044D022 /* InventoryManageriOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178D922B2932CC0044D022 /* InventoryManageriOSApp.swift */; };
-		02178D952B2932CC0044D022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178D942B2932CC0044D022 /* ContentView.swift */; };
+		02178D952B2932CC0044D022 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178D942B2932CC0044D022 /* OnboardingView.swift */; };
 		02178D972B2932CE0044D022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02178D962B2932CE0044D022 /* Assets.xcassets */; };
 		02178D9A2B2932CE0044D022 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02178D992B2932CE0044D022 /* Preview Assets.xcassets */; };
 		02178DA42B2932CE0044D022 /* InventoryManageriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178DA32B2932CE0044D022 /* InventoryManageriOSTests.swift */; };
 		02178DAE2B2932CE0044D022 /* InventoryManageriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178DAD2B2932CE0044D022 /* InventoryManageriOSUITests.swift */; };
 		02178DB02B2932CE0044D022 /* InventoryManageriOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178DAF2B2932CE0044D022 /* InventoryManageriOSUITestsLaunchTests.swift */; };
+		02178DC02B2943860044D022 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178DBF2B2943860044D022 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		02178D8F2B2932CC0044D022 /* InventoryManageriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryManageriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02178D922B2932CC0044D022 /* InventoryManageriOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryManageriOSApp.swift; sourceTree = "<group>"; };
-		02178D942B2932CC0044D022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02178D942B2932CC0044D022 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		02178D962B2932CE0044D022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02178D992B2932CE0044D022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02178D9F2B2932CE0044D022 /* InventoryManageriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManageriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		02178DA92B2932CE0044D022 /* InventoryManageriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManageriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02178DAD2B2932CE0044D022 /* InventoryManageriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryManageriOSUITests.swift; sourceTree = "<group>"; };
 		02178DAF2B2932CE0044D022 /* InventoryManageriOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryManageriOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02178DBF2B2943860044D022 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,8 @@
 		02178D912B2932CC0044D022 /* InventoryManageriOS */ = {
 			isa = PBXGroup;
 			children = (
+				02178DBD2B2943610044D022 /* Onboarding */,
 				02178D922B2932CC0044D022 /* InventoryManageriOSApp.swift */,
-				02178D942B2932CC0044D022 /* ContentView.swift */,
 				02178D962B2932CE0044D022 /* Assets.xcassets */,
 				02178D982B2932CE0044D022 /* Preview Content */,
 			);
@@ -125,6 +127,15 @@
 				02178DAF2B2932CE0044D022 /* InventoryManageriOSUITestsLaunchTests.swift */,
 			);
 			path = InventoryManageriOSUITests;
+			sourceTree = "<group>";
+		};
+		02178DBD2B2943610044D022 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				02178D942B2932CC0044D022 /* OnboardingView.swift */,
+				02178DBF2B2943860044D022 /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02178D952B2932CC0044D022 /* ContentView.swift in Sources */,
+				02178D952B2932CC0044D022 /* OnboardingView.swift in Sources */,
+				02178DC02B2943860044D022 /* OnboardingViewModel.swift in Sources */,
 				02178D932B2932CC0044D022 /* InventoryManageriOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
