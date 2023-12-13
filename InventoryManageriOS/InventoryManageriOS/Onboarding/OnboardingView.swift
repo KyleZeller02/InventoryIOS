@@ -56,17 +56,24 @@ struct OnboardingView: View {
 
             // Login button that triggers the HandleLogin function in the view model.
             // Styled to be prominent with a blue background and white text.
-            Button(action: viewModel.HandleLogin) {
-                Text("Login")
-                    .fontWeight(.semibold)
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .padding(.horizontal)
+            Button("Login") {
+                // Use a Task to handle the asynchronous login function
+                Task {
+                    await viewModel.handleLogin()
+                }
             }
-
+            .fontWeight(.semibold)
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .padding(.horizontal)
+            
+            if let errorMessage = viewModel.errorMessage { // show the error
+                            Text(errorMessage)
+                                .foregroundColor(.red)
+                        }
             Spacer()
 
             // Footer text providing additional information or welcome message to the user.
@@ -74,6 +81,7 @@ struct OnboardingView: View {
             Text("Welcome to your inventory management system")
                 .font(.footnote)
                 .foregroundColor(colorScheme == .dark ? .gray : .secondary)
+            Spacer()
         }
         .padding()
     }
