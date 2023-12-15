@@ -7,74 +7,84 @@
 
 import SwiftUI
 
-import SwiftUI
-
+/// `InventoryView` presents a list of items in an inventory. It includes a search bar for filtering items,
+/// a list showing each item with details, and a button to add new items to the inventory.
 struct InventoryView: View {
+    // StateObject to observe changes in the ViewModel.
     @StateObject var viewModel = InventoryViewModel()
+    // State property to hold the current search text.
     @State private var searchText = ""
 
     var body: some View {
+        // NavigationView allows for navigation between views and adds a navigation bar.
         NavigationView {
+            // VStack arranges its child views in a vertical line.
             VStack {
-                // Search Bar
+                // Search Bar for filtering inventory items.
                 TextField("Search items", text: $searchText)
-                    .padding(7)
-                    .background(Color(.systemGray6)) // Adapts automatically
-                    .cornerRadius(10)
-                    .padding(.horizontal)
+                    .padding(7) // Padding around the text field for visual appeal.
+                    .background(Color(.systemGray6)) // Background color adapting to dark and light modes.
+                    .cornerRadius(10) // Rounded corners for the text field.
+                    .padding(.horizontal) // Horizontal padding around the search bar.
 
-                // List of Items
+                // List displaying inventory items.
                 List(viewModel.items.filter {
+                    // Filter logic: show all items if search text is empty, or filter by name.
                     searchText.isEmpty ? true : $0.name.contains(searchText)
                 }) { item in
-                     
-                        HStack {
-                            Image(uiImage: item.image) // Placeholder for item image
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                            VStack(alignment: .leading) {
-                                Text(item.name)
-                                    .font(.headline)
-                                    .foregroundColor(Color.primary) // Adapts to color scheme
-                                Text(item.description)
-                                    .font(.subheadline)
-                                    .foregroundColor(Color.secondary) // Adapts to color scheme
-                                Text(String(format: "Price: $%.2f", item.price))
-                                    .foregroundColor(Color.primary) // Adapts to color scheme
-                                Text("Count: \(item.count)")
-                                    .foregroundColor(Color.primary) // Adapts to color scheme
-                            }
+                    // HStack arranges item details in a horizontal line.
+                    HStack {
+                        // Item image display.
+                        Image(uiImage: item.image) // Placeholder for item image.
+                            .resizable() // Makes the image resizable.
+                            .frame(width: 50, height: 50) // Sets the size of the image.
+
+                        // VStack for item details, aligned to the leading edge.
+                        VStack(alignment: .leading) {
+                            // Item name display.
+                            Text(item.name)
+                                .font(.headline) // Headline font for the item name.
+                                .foregroundColor(Color.primary) // Text color adapting to dark and light modes.
+
+                            // Item description display.
+                            Text(item.description)
+                                .font(.subheadline) // Subheadline font for the item description.
+                                .foregroundColor(Color.secondary) // Secondary color for less emphasis.
+
+                            // Item price display formatted to two decimal places.
+                            Text(String(format: "Price: $%.2f", item.price))
+                                .foregroundColor(Color.primary) // Primary color for the price text.
+
+                            // Item count display.
+                            Text("Count: \(item.count)")
+                                .foregroundColor(Color.primary) // Primary color for the count text.
                         }
                     }
-                
+                }
 
-                // Add Item Button
+                // Button to add a new item to the inventory.
                 Button(action: {
-                    // Implement the action to add a new item
+                    // Action to add a new item.
                 }) {
                     Text("Add Item")
-                        .padding()
-                        .background(Color.blue) // Consider using a color that adapts
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .font(.headline) // Headline font for the button text.
+                        .foregroundColor(Color.white) // White text color for contrast.
+                        .padding() // Padding inside the button for a better touch area.
+                        .frame(maxWidth: .infinity) // Makes the button expand to the full width.
+                        .background(Color.blue) // Blue background for the button.
+                        .cornerRadius(10) // Rounded corners for the button.
+                        .padding() // Padding around the button.
                 }
-                .padding()
+                .padding() // Additional padding around the button.
             }
-            .navigationTitle("Inventory")
+            .navigationTitle("Inventory") // Sets the title of the navigation bar.
         }
     }
 }
 
 
 // Define the structure of an inventory item
-struct InventoryItem: Identifiable {
-    let id = UUID()
-    var name: String
-    var description: String
-    var image: UIImage
-    var price: Double
-    var count: Int
-}
+
 
 // View Model for InventoryView
 class InventoryViewModel: ObservableObject {

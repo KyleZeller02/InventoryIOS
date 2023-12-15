@@ -36,7 +36,7 @@ struct OnboardingView: View {
                 .font(.largeTitle)
                    .fontWeight(.bold)
                    .foregroundColor(colorScheme == .dark ? .white : .primary)
-                   .minimumScaleFactor(0.5)
+                   .minimumScaleFactor(0.5) // allows the text to get smaller when the textfield is selected
                    .padding(.horizontal)
 
             // Username input field.
