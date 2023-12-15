@@ -13,7 +13,7 @@ struct InventoryManageriOSApp: App {
     // Initialize Firebase
     init() {
         FirebaseApp.configure()
-        UserDefaults.standard.set(false, forKey: "isLoggedIn") // comment out as needed, this will make is logged in = false, and show the onboarding view
+        //UserDefaults.standard.set(false, forKey: "isLoggedIn") // comment out as needed, this will make is logged in = false, and show the onboarding view
 
         
     }

@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5C13F0D5-7015-437D-BC42-BE3F3054B014"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InventoryManageriOS/Onboarding/OnboardingViewModel.swift"
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "80F1830F-6195-479C-A19F-E589E4E77E04"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InventoryManageriOS/Onboarding/OnboardingFirebaseManager.swift"
@@ -98,6 +98,38 @@
             endingLineNumber = "49"
             landmarkName = "login(email:password:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "80F1830F-6195-479C-A19F-E589E4E77E04 - cc57acd60c276b89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InventoryManageriOS.OnboardingFirebaseManager.login(email: Swift.String, password: Swift.String) async throws -&gt; __C.FIRAuthDataResult"
+                  moduleName = "InventoryManageriOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylezeller/Desktop/InventoryApp/iOSApp/InventoryManageriOS/InventoryManageriOS/Onboarding/OnboardingFirebaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "80F1830F-6195-479C-A19F-E589E4E77E04 - f45d2e73e746e488"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for InventoryManageriOS.OnboardingFirebaseManager.login(email: Swift.String, password: Swift.String) async throws -&gt; __C.FIRAuthDataResult"
+                  moduleName = "InventoryManageriOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylezeller/Desktop/InventoryApp/iOSApp/InventoryManageriOS/InventoryManageriOS/Onboarding/OnboardingFirebaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

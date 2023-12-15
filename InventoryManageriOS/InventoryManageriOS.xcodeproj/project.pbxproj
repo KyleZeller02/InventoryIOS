@@ -47,6 +47,8 @@
 		02178E032B29521F0044D022 /* OnboardingFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E022B29521F0044D022 /* OnboardingFirebaseManager.swift */; };
 		02178E042B29521F0044D022 /* OnboardingFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E022B29521F0044D022 /* OnboardingFirebaseManager.swift */; };
 		02178E052B29521F0044D022 /* OnboardingFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E022B29521F0044D022 /* OnboardingFirebaseManager.swift */; };
+		02178E092B2BE6520044D022 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E082B2BE6520044D022 /* TransactionView.swift */; };
+		02178E0B2B2BE6610044D022 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E0A2B2BE6610044D022 /* InventoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		02178DC52B294C670044D022 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
 		02178DC72B294CD10044D022 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		02178E022B29521F0044D022 /* OnboardingFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFirebaseManager.swift; sourceTree = "<group>"; };
+		02178E082B2BE6520044D022 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		02178E0A2B2BE6610044D022 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,9 +210,27 @@
 		02178DC42B294C100044D022 /* DashBoard */ = {
 			isa = PBXGroup;
 			children = (
+				02178E072B2BE3CA0044D022 /* Inventory */,
+				02178E062B2BE3B70044D022 /* Transactions */,
 				02178DC52B294C670044D022 /* DashBoardView.swift */,
 			);
 			path = DashBoard;
+			sourceTree = "<group>";
+		};
+		02178E062B2BE3B70044D022 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				02178E082B2BE6520044D022 /* TransactionView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		02178E072B2BE3CA0044D022 /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				02178E0A2B2BE6610044D022 /* InventoryView.swift */,
+			);
+			path = Inventory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,7 +400,9 @@
 				02178DC62B294C670044D022 /* DashBoardView.swift in Sources */,
 				02178E032B29521F0044D022 /* OnboardingFirebaseManager.swift in Sources */,
 				02178DC02B2943860044D022 /* OnboardingViewModel.swift in Sources */,
+				02178E0B2B2BE6610044D022 /* InventoryView.swift in Sources */,
 				02178D932B2932CC0044D022 /* InventoryManageriOSApp.swift in Sources */,
+				02178E092B2BE6520044D022 /* TransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
