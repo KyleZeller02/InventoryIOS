@@ -51,6 +51,8 @@
 		02178E0B2B2BE6610044D022 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E0A2B2BE6610044D022 /* InventoryView.swift */; };
 		02178E0D2B2C1E400044D022 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E0C2B2C1E400044D022 /* TransactionViewModel.swift */; };
 		02178E102B2C1E7A0044D022 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E0F2B2C1E7A0044D022 /* Item.swift */; };
+		02178E122B2CB41F0044D022 /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E112B2CB41F0044D022 /* InventoryViewModel.swift */; };
+		02178E142B2CB8E40044D022 /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02178E132B2CB8E40044D022 /* NumberInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		02178E0A2B2BE6610044D022 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		02178E0C2B2C1E400044D022 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		02178E0F2B2C1E7A0044D022 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		02178E112B2CB41F0044D022 /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
+		02178E132B2CB8E40044D022 /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,7 @@
 			children = (
 				02178E082B2BE6520044D022 /* TransactionView.swift */,
 				02178E0C2B2C1E400044D022 /* TransactionViewModel.swift */,
+				02178E132B2CB8E40044D022 /* NumberInputView.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				02178E0A2B2BE6610044D022 /* InventoryView.swift */,
+				02178E112B2CB41F0044D022 /* InventoryViewModel.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -415,6 +421,8 @@
 				02178DC62B294C670044D022 /* DashBoardView.swift in Sources */,
 				02178E032B29521F0044D022 /* OnboardingFirebaseManager.swift in Sources */,
 				02178DC02B2943860044D022 /* OnboardingViewModel.swift in Sources */,
+				02178E122B2CB41F0044D022 /* InventoryViewModel.swift in Sources */,
+				02178E142B2CB8E40044D022 /* NumberInputView.swift in Sources */,
 				02178E0B2B2BE6610044D022 /* InventoryView.swift in Sources */,
 				02178D932B2932CC0044D022 /* InventoryManageriOSApp.swift in Sources */,
 				02178E092B2BE6520044D022 /* TransactionView.swift in Sources */,

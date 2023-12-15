@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-struct Item: Identifiable {
-    let id = UUID()
-    var name: String
-    var price: Double
-}
-
 struct InventoryItem: Identifiable {
     let id = UUID()
     var name: String
@@ -22,3 +16,5 @@ struct InventoryItem: Identifiable {
     var price: Double
     var count: Int
 }
+
+

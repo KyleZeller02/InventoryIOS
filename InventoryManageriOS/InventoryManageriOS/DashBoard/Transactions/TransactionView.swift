@@ -7,98 +7,81 @@
 
 import SwiftUI
 
-/// `TransactionView` displays a list of items in a shopping cart. It allows users to remove items
-/// and includes a button to finalize the purchase. This view is designed to work with a ViewModel
-/// that manages the state of the cart, including the list of items and the total price.
+/// `TransactionView` displays a list of items in a shopping cart.
+/// It shows item details such as name, description, quantity, and price.
+/// It also provides functionality to remove items from the cart and scan barcodes.
 struct TransactionView: View {
-    // StateObject property wrapper to observe the ViewModel. This ensures the view updates
-    // when the data in the ViewModel changes.
-    @StateObject var viewModel: TransactionViewModel = TransactionViewModel()
+    // ViewModel for managing the state and logic of the transaction.
+    @StateObject var viewModel = TransactionViewModel()
+
+    // Environment value to detect the current color scheme (light or dark mode).
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
-        // The NavigationView enables the use of navigation within this view, including a navigation bar.
+        // Wrapping the content inside a NavigationView for navigation capabilities.
         NavigationView {
-            // VStack arranges subviews in a vertical line. This is used to layout the list of items
-            // and the finalize purchase button.
+            // VStack to vertically layout the components.
             VStack {
-                // List displays a collection of items. It's used here to show the shopping cart items.
+                // List to dynamically display an array of items.
                 List {
-                    // ForEach is used to iterate over the items in the ViewModel. It creates a view for
-                    // each item in the list.
+                    // Iterating over each item in the viewModel.
                     ForEach(viewModel.items) { item in
-                        // HStack arranges the item's name, price, and remove button in a horizontal line.
+                        // Horizontal stack for each item's view.
                         HStack {
-                            // Displays the name of the item using the headline font style.
-                            Text(item.name)
-                                .font(.headline)
+                            // VStack for aligning item name and description vertically.
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                    .font(.headline) // Font style for the item name.
+                                Text(item.description)
+                                    .font(.subheadline) // Font style for the item description.
+                                    .foregroundColor(.gray) // Text color for the description.
+                            }
 
-                            Spacer()
+                            Spacer() // Spacer to push content to the left.
 
-                            // Displays the price of the item. The price is formatted to two decimal places.
-                            // The color green is used for the price text.
+                            // Displaying the quantity of the item.
+                            Text("Qty: \(item.count)")
+                                .padding(.horizontal) // Padding to space out the text.
+
+                            // Displaying the price of the item.
                             Text("$\(item.price, specifier: "%.2f")")
-                                .font(.subheadline)
-                                .foregroundColor(Color.green)
+                                .foregroundColor(Color.green) // Green color for price.
 
-                            // Button to remove the item from the cart. It uses a red minus circle icon.
-                            // Padding is added to increase the tappable area.
+                            // Button to remove the item from the cart.
                             Button(action: {
                                 viewModel.removeItem(item)
                             }) {
                                 Image(systemName: "minus.circle.fill")
-                                    .foregroundColor(Color.red)
+                                    .foregroundColor(Color.red) // Red color for the remove icon.
                                     .padding(8)
                             }
-                            .buttonStyle(PlainButtonStyle()) // Applies a plain button style.
+                            .buttonStyle(PlainButtonStyle()) // Applying a plain button style.
                         }
                     }
-                    .onDelete(perform: deleteItems) // Enables swipe-to-delete functionality.
                 }
-                .listStyle(GroupedListStyle()) // Applies a grouped list style.
+                .listStyle(GroupedListStyle()) // Style for the list.
 
-                // Displays the total price of all items in the cart at the bottom.
-                HStack {
-                    Spacer()
-                    Text("Total: $\(viewModel.totalPrice, specifier: "%.2f")")
-                        .font(.title) // Large title font for total price.
-                        .padding()
-                }
-
-                // Button to finalize the purchase. It's styled with a blue background and rounded corners.
+                // Button for scanning a barcode.
                 Button(action: {
-                    viewModel.finalizePurchase()
+                    // Action to scan a barcode.
                 }) {
-                    Text("Finalize Purchase")
-                        .font(.headline)
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .frame(maxWidth: .infinity) // Ensures the button expands to the full width.
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                        .padding()
-                }
-            }
-            .navigationTitle("Shopping Cart") // Sets the title of the navigation bar.
-            .toolbar {
-                // ToolbarItem in the navigation bar for adding new items, represented by a camera icon.
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        // Action to add a new item.
-                    }) {
+                    HStack {
                         Image(systemName: "camera.viewfinder")
-                            .font(.title)
+                            .font(.title2)
+                        Text("Scan Barcode")
+                            .font(.headline)
                     }
+                    .font(.headline) // Headline font for the button text.
+                    .foregroundColor(Color.white) // White text color for contrast.
+                    .padding() // Padding inside the button for a better touch area.
+                    .frame(maxWidth: .infinity) // Makes the button expand to the full width.
+                    .background(Color.blue) // Blue background for the button.
+                    .cornerRadius(10) // Rounded corners for the button.
+                    .padding() // Padding around the button.
                 }
+                .padding() // Padding around the scan barcode button.
             }
-        }
-    }
-
-    /// Deletes items from the cart. This function is called when the user swipes to delete an item.
-    /// - Parameter offsets: The index set of items to be deleted.
-    private func deleteItems(at offsets: IndexSet) {
-        offsets.forEach { index in
-            let item = viewModel.items[index]
-            viewModel.removeItem(item)
+            .navigationTitle("Shopping Cart") // Title for the navigation bar.
         }
     }
 }
