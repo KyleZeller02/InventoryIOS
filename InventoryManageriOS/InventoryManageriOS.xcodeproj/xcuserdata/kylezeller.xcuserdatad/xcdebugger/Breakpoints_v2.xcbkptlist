@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9E6B8C64-8339-4A19-8786-857F1F025D08"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "InventoryManageriOS/Onboarding/OnboardingViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "handleLogin()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9E6B8C64-8339-4A19-8786-857F1F025D08 - 4075e5d0b125ec34"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in InventoryManageriOS.OnboardingViewModel.handleLogin() async -&gt; ()"
-                  moduleName = "InventoryManageriOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kylezeller/Desktop/InventoryApp/iOSApp/InventoryManageriOS/InventoryManageriOS/Onboarding/OnboardingViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "9E6B8C64-8339-4A19-8786-857F1F025D08 - 4075e5d0b125ec34"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in InventoryManageriOS.OnboardingViewModel.handleLogin() async -&gt; ()"
-                  moduleName = "InventoryManageriOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kylezeller/Desktop/InventoryApp/iOSApp/InventoryManageriOS/InventoryManageriOS/Onboarding/OnboardingViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "168">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C55D8ECA-F932-4D7B-9439-E13067986C02"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -87,16 +39,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3B57712E-FADB-4997-AFA2-F1E721D2E2B7"
+            uuid = "5C13F0D5-7015-437D-BC42-BE3F3054B014"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InventoryManageriOS/Onboarding/OnboardingViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "handleLogin()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5C13F0D5-7015-437D-BC42-BE3F3054B014 - a9b49f4e3f119a06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InventoryManageriOS.OnboardingViewModel.handleLogin() async -&gt; ()"
+                  moduleName = "InventoryManageriOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylezeller/Desktop/InventoryApp/iOSApp/InventoryManageriOS/InventoryManageriOS/Onboarding/OnboardingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "5C13F0D5-7015-437D-BC42-BE3F3054B014 - cf130fb0f8fdb6fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for InventoryManageriOS.OnboardingViewModel.handleLogin() async -&gt; ()"
+                  moduleName = "InventoryManageriOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylezeller/Desktop/InventoryApp/iOSApp/InventoryManageriOS/InventoryManageriOS/Onboarding/OnboardingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80F1830F-6195-479C-A19F-E589E4E77E04"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InventoryManageriOS/Onboarding/OnboardingFirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "login(email:password:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

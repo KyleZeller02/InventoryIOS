@@ -34,9 +34,10 @@ struct OnboardingView: View {
             // Horizontal padding is added to allow the text to wrap and prevent cutting off on smaller screens.
             Text("StoreMaster: Sales & Stock")
                 .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(colorScheme == .dark ? .white : .primary)
-                .padding(.horizontal)
+                   .fontWeight(.bold)
+                   .foregroundColor(colorScheme == .dark ? .white : .primary)
+                   .minimumScaleFactor(0.5)
+                   .padding(.horizontal)
 
             // Username input field.
             // It changes background color based on the color scheme for better visibility.
@@ -74,7 +75,7 @@ struct OnboardingView: View {
                             Text(errorMessage)
                                 .foregroundColor(.red)
                         }
-            Spacer()
+          
 
             // Footer text providing additional information or welcome message to the user.
             // Its color also adapts to the color scheme.
